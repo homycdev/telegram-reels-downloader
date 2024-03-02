@@ -11,16 +11,14 @@ pub struct IgFetchError {
 
 impl IgFetchError {
     pub fn from_string(reason: String) -> Self {
-        IgFetchError {
-            reason
-        }
+        IgFetchError { reason }
     }
 }
 
 impl From<ReqwetError> for IgFetchError {
     fn from(value: ReqwetError) -> Self {
         IgFetchError {
-            reason: value.to_string()
+            reason: value.to_string(),
         }
     }
 }

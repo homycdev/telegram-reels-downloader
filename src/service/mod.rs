@@ -1,2 +1,2 @@
-pub mod url_fetcher;
 mod errors;
+pub mod url_fetcher;

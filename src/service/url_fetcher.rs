@@ -15,5 +15,3 @@ pub async fn fetch_url(url: String) -> Result<String, IgFetchError> {
         }
     }
 }
-
-
