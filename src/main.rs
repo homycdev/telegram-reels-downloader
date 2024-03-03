@@ -1,10 +1,8 @@
+use crate::command::model::Command;
 use teloxide::prelude::*;
 
-use crate::domain::command::Command;
-
-mod domain;
-mod handler;
-mod service;
+mod command;
+mod ig;
 
 #[tokio::main]
 async fn main() {
@@ -14,5 +12,5 @@ async fn main() {
 
     let bot = Bot::from_env();
 
-    Command::repl(bot, handler::command::command_handler).await;
+    Command::repl(bot, command::handler::command_handler).await;
 }

@@ -1,5 +1,5 @@
-use crate::domain::types::types::{IGResponse, ReelUrl};
-use crate::service::errors::IgFetchError;
+use crate::ig::errors::IgFetchError;
+use crate::ig::model::{IGResponse, ReelUrl};
 
 pub async fn fetch_url(url: String) -> Result<String, IgFetchError> {
     let url = ReelUrl::new(url);

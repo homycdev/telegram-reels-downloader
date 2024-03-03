@@ -3,9 +3,10 @@ use teloxide::types::InputFile;
 use teloxide::Bot;
 use teloxide::{prelude::*, utils::command::BotCommands};
 
-use crate::domain::command::Command;
-use crate::domain::types::types::MyResponseResult;
-use crate::service::url_fetcher;
+use crate::command::model::Command;
+use crate::ig::url_fetcher;
+
+pub type MyResponseResult = ResponseResult<()>;
 
 pub async fn command_handler(bot: Bot, msg: Message, cmd: Command) -> MyResponseResult {
     match cmd {
